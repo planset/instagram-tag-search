@@ -1,0 +1,14 @@
+﻿{% extends "mlayout.html" %}
+{% set title="tag search" %}
+
+{% block body %}
+
+	<div data-role="fieldcontain">
+		<label for="tag_name">Tag Input:</label>
+    	<input type="text" name="tag_name" id="tag_name" value="{{ tag_name }}"></input>
+	</div>
+	<ul data-role="listview" class="ui-listview" id="items"></ul>
+
+{% endblock %}
+
+

@@ -1,0 +1,9 @@
+<div id="page_{{ item.id }}" data-role="page" data-theme="a">
+    <div data-role="header"><h1>&nbsp;</h1></div>
+    <div data-role="content">
+        <img src="{{ item.images['low_resolution'].url }}" width="100%" />
+        <p>{{ item.caption['text'] }}</p>
+        <p><img src="{{ item.user.profile_picture }}" width="20" />{{ item.user.username}}</p>
+    </div>
+    <div data-role="footer"><h1>&nbsp;</h1></div>
+</div>

@@ -1,0 +1,6 @@
+{% for item in items  %}
+	<a href="{{ item.link }}"><img src="{{ item.images["thumbnail"].url }}" /></a>
+{% else %}
+    not found 
+{% endfor %}
+

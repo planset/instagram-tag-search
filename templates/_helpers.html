@@ -1,0 +1,11 @@
+{% macro link_to(endpoint, text) -%}
+<a href="{{ url_for(endpoint, **kwargs) }}">{{ text|safe }}</a>
+{%- endmacro %}
+
+{% macro form_tag(endpoint, method='post') -%}
+<form action="{{ url_for(endpoint, **kwargs) }}" method="{{ method }}">
+    <input type="hidden" name="_csrf_token" id="_csrf_token" value="{{ csrf_token() }}">
+  {{ caller () }}
+</form>
+{%- endmacro %}
+

@@ -1,0 +1,70 @@
+body            { width: 620px; margin: 30px auto 0 auto;
+                  font-family: Helvetica, "Helvetica Neue", sans-serif;
+                  color: #444; background: #fff; line-height:1.3; }
+a, h1, h2       { color: #377BA8; }
+h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 1px solid #bbb; margin-bottom: 2px;}
+h2              { font-size: 1.2em; }
+
+ul              { margin: 0;}
+
+header          { margin-top: 20px; position: relative;}
+section#content { margin: 0 auto; margin-top: 10px; }
+footer          { clear: both; margin: 30px 1px 3px 1px; border-top:1px solid #bbb;
+                  padding: 3px 0px;}
+
+div#user_information { text-align: right; }
+
+.page           { margin: 2em auto; width: 35em; border: 5px solid #ccc;
+                  padding: 0.8em; background: white; }
+.entries        { list-style: none; margin: 0; padding: 0; }
+.entries li     { margin: 0.8em 1.2em; }
+.entries li h2  { margin-left: -1em; }
+.add-entry      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
+.add-entry dl   { font-weight: bold; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background: #fafafa; }
+.flash          { margin:3px 1px;background: #CEE5F5; padding: 0.5em;
+                  border: 1px solid #AACBE2; height: 20px;}
+.error          { background: #F0D6D6; padding: 0.5em; }
+
+#login_form_container     { margin:100px auto; padding: 30px 0 0 50px; 
+                            width:340px; height:170px; background-color: #eee; 
+                            line-height: 2; }
+#sites_container { padding: 0 20px;}         
+
+#add_new_site_form_container     { margin:100px auto; padding: 30px 0 0 50px; 
+                            width:340px; height:170px; background-color: #eee; 
+                            line-height: 2; }
+
+
+
+            
+.site           { display:block; height: 19px;
+                  background-color: #fff;
+                  border-radius: 4px 4px 4px 4px;
+                  -webkit-border-radius: 4px 4px 4px 4px;
+                  -moz-border-radius: 4px 4px 4px 4px;
+                  padding: 9px 0 9px 17px;
+                  border: none; font-size: 12px;
+                  position:relative; white-space: nowrap;
+                  }
+
+.virtual_host_item_header { background-image: url("/static/img/item_header.gif");
+                            background-repeat: repeat-y;
+                            background-position: 1px 0; 
+                            left:0; top: 11px; position:absolute;
+                            width: 15px; height:16px;
+                            color:#333; }                     
+div.site span       { display: inline-block; text-valign: center; }
+.site span.domain_name { width: 250px; }
+span.site .control_button { width: 100px; }
+                            
+/*
+ * clearfix
+ */
+.clearfix:after { display: block; visibility: hidden; clear: both;
+                  height: 0; font-size: 0; content: " "; }
+* html .clearfix { zoom: 1; }
+*:first-child+html .clearfix { zoom: 1; }
+

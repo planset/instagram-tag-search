@@ -1,0 +1,25 @@
+{% for item in items %}
+<li class="ui-li-has-thumb ui-btn ui-btn-icon-right ui-li ui-btn-up-c" data-theme="a">
+    <div class="ui-btn-inner ui-li">
+        <div class="ui-btn-text">
+            <a href="/m/item/{{ item.id }}" data-transition="slide" class="ui-link-inherit">
+                <img src="{{ item.images['thumbnail'].url }}" class="ui-li-thumb">
+                <h3 class="ui-li-heading">{{ item.caption["text"] }}</h3>
+                <p class="ui-li-desc"><img src="{{ item.user.profile_picture }}" width="20"/>{{ item.user.username }}</p>
+            </a>
+        </div>
+        <span class="ui-icon ui-icon-arrow-r"></span>
+    </div>
+</li>
+{% else %}
+ <li class="ui-li-has-thumb ui-btn ui-btn-icon-right ui-li ui-btn-up-c" data-theme="a">
+    <div class="ui-btn-inner ui-li">
+        <div class="ui-btn-text">
+            <a href="" class="ui-link-inherit">
+                <h3 class="ui-li-heading">not found</h3>
+            </a>
+        </div>
+        <span class="ui-icon ui-icon-arrow-r"></span>
+    </div>
+</li>
+{% endfor %}

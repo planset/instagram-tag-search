@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for("static", filename="jquery-mobile/jquery.mobile-1.0a3.min.css") }}" >
+    <script src="{{ url_for("static", filename="js/jquery-1.5.1.min.js") }}"></script>
+    <script src="{{ url_for("static", filename="jquery-mobile/jquery.mobile-1.0a3.min.js") }}"></script>
+ 	
+	<script type="text/javascript">
+	$(function(){
+
+	    load_items = function(){
+	        $("#items").html("now loding...");
+	        $("#items").load("/m/" + $("#tag_name").val());
+	    }
+
+	    $("#tag_name").change(function(e){
+		    load_items();
+	    });
+
+	});
+	</script>
+   
+	<title>{{ title }}</title>
+</head>
+<body>
+
+<div data-role="page" data-theme="a" >
+	<div data-role="header">
+		<h1>{{ title }}&nbsp;</h1>
+	</div><!-- /header -->
+
+    <div data-role="content">
+		{% block body %}
+		{% endblock %}
+    </div><!-- /content -->
+	
+    <div data-role="footer">
+		<h1>{{ footer }}&nbsp;</h1>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
